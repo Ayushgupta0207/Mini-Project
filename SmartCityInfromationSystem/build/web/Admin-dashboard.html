@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin-page</title>
+    <style>
+        *{padding: 0;margin: 0;box-sizing: border-box;}
+        .container{
+            height: 100vh;
+            width: auto;
+        }
+        .header{
+            height: 12vh;
+            background-color: #3e2bb8;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1px;
+        }
+        .header h2{
+            padding: 25px;
+            color: white;
+            /* font-size: 50px; */
+        }
+        nav{
+            height: 9vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:#3e2bb8;
+            flex-wrap: wrap;
+            margin-bottom: 2px;
+            padding: 8px;
+        }
+        nav li{
+            display: inline-block;
+           
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-size: 22px;
+            padding: 25px;
+            color: white;
+            margin:6px auto;
+        }
+        nav ul li a:hover{
+            color: white;
+        }
+        nav ul  li a::after{
+            content:  '';
+            display: block;
+            width: 0;
+            height: 2px;
+            position: relative;
+            left:0;
+            background-color: white;
+            transition: .3s;
+        }
+        nav li a:hover::after{
+            width: 100%;
+        }
+        .main-body{
+                height:80vh;
+        }
+        .main-body ul{
+            width: 80%;
+            margin-left: 2px;
+        }
+        .main-body ul li{
+        background-color:#3e2bb8;
+        margin-bottom: 2px ;
+        padding: 10px;
+        list-style: none ;
+        }
+        .main-body ul li a{
+            text-decoration: none;
+            font-size: 22px;
+            padding: 20px;
+            color: white;
+            font-family: sans-serif;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+<h2>SMART CITY MANAGEMENT SYSTEM</h2>
+        </div>
+        <nav>
+            <ul id = "menu">
+                <li><a href="admin-home.html">Home</a></li>
+                <li class="about"><a href ="adminabout.html">About Us</a>
+                </li>
+                <li class = "Dashboard"><a href="allcities_admin.html">All Cities</a>
+                </li>
+                <li class = "Administration"><a href="Admin-dashboard.html">Administration</a></li>
+                <li class = "Reports"><a href="cityreport.html">Reports</a></li>
+                <li class = "MyAccount"><a href="myaccount.html">My Account</a></li>
+                <li class = "logout"><a href="index.html" onclick="preventback()">Log out</a></li>
+                
+                
+               
+            </ul>   
+        </nav>
+        <div class="welmsg" style="height: 7vh;margin-bottom: 5px ;">
+            <h2 style="padding: 15px; color:#3e2bb8; font-size: 30px;">Welcome to Smart City Mangement System</h2>
+        </div>
+        <div class="main" style="padding: 10px;">
+        <div class="main-body">
+            <ul>
+                <li><a href="admin-home.html">HOME</a></li>
+                <li><a href="allcities_admin.html">ADD PLACE</a></li>
+                <li><a href="cityreport.html">CITY REPORT</a></li>
+                <li><a href="allcities_admin_report.html">TYPE REPORT</a></li>
+                <li><a href="myaccount.html">MY Account</a></li>
+
+
+            </ul>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

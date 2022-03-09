@@ -1,0 +1,99 @@
+*{padding: 0;margin: 0;box-sizing: border-box;}
+       
+         .banks{
+          
+            margin-top: 20px;
+            margin-left: 20px;
+            height:40px;
+            width:1000px;
+            background-color:#3e2bb8;
+            border-radius:10px;
+        }
+        .banks p{
+            font-size: 25px;
+            font-family:Arial,Helvetica, sans-serif;
+            color:white;
+           padding:5px;
+        }
+      *{padding: 0;margin: 0;box-sizing: border-box;}
+        .container{
+            height: 100vh;
+            width: auto;
+            /* overflow: hidden; */
+        }
+        .header{
+            height: 12vh;
+            background-color: #3e2bb8;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1px;
+        }
+        .header h2{
+            padding: 25px;
+            color: white;
+            /* font-size: 50px; */
+        }
+        nav{
+            height: 8vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:#3e2bb8;
+            flex-wrap: wrap;
+            margin-bottom: 2px;
+        }
+        nav li{
+            display: inline-block;
+           
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-size: 22px;
+            padding: 20px;
+            color: white;
+            /* position: relative; */
+            margin:4px auto;
+        }
+        nav li a:hover{
+            color: #3e2bb8;
+            background-color:white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        
+/*        nav li a::after{
+            content:  '';
+            display: block;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            left:0;
+            background-color: white;
+            transition: .3s;
+        }
+        nav li a:hover::after{
+            width: 100%;
+        }*/
+        .main-body{
+                height:80vh;
+                background-color: white;
+                /* margin-top: 5px; */
+        }
+        .main-body ul{
+            width: 80%;
+            margin-left: 2px;
+        }
+        .main-body ul li{
+        background-color: #3e2bb8;
+        margin-bottom: 2px ;
+        padding: 10px;
+        list-style: none ;
+        }
+        .main-body ul li a{
+            text-decoration: none;
+            font-size: 22px;
+            padding: 20px;
+            color: white;
+            font-family: sans-serif;
+            padding-right: 20px;
+        }

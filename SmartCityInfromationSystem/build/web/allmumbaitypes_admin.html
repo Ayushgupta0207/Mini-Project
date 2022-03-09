@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+   
+    <title>All Types</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            margin: 0px auto;
+        }
+        .container2{
+            /* height: 100vh; */
+            width: auto;
+            background-color: white;
+        }
+        .header{
+            background-color: #3e2bb8;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 1px;
+        }
+        .header h2{
+            padding: 25px;
+            color: white;
+        }
+        nav{
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3e2bb8;
+            flex-wrap: wrap;
+            margin-bottom: 1px;
+            padding: 5px;
+        }
+        nav li{
+            display: inline-block;
+
+           
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-size: 22px;
+            color: white;
+            position: relative;
+            margin:23px;
+        }
+        nav ul li a:hover{
+            color: white;
+        }
+        nav ul  li a::after{
+            content:  '';
+            display: block;
+            width: 0;
+            height: 2px;
+            position: relative;
+            left:0;
+            background-color: white;
+            transition: .3s;
+        }
+        nav li a:hover::after{
+            width: 100%;
+        }
+        .para span{
+            font-size: 40px; 
+            font-weight: 900; 
+            color:black;
+        }
+        .header a i{
+            display: none;
+            font-size: 30px;
+        }
+        .cities h1{
+            font-size: 40px;
+            margin-left: 3%;
+            color: blue;
+        }
+        .explore{
+            width: 100%;
+            display: flex;
+        }
+        .city{
+            width: 20%;
+            height: 305px;
+            border: 2px solid blue;
+            flex-wrap: wrap;
+            margin: 5px;
+            padding: 5px;
+        }
+        .city img{
+            width: 100%;
+            height: 250px;
+        }
+        .city a{
+            text-decoration: none;
+            color: white;
+            font-size: 22px;
+        }
+        .city button{
+            margin: 2px;
+            width: 98%;
+            background-color:#3e2bb8;
+            padding: 4px;
+            border-radius: 6px;
+        }
+
+        /* footer css */
+        .container {
+        background-color: rgb(34, 34, 190);
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding-top: 2%;
+        line-height: 30px;
+        flex-wrap: wrap;
+      }
+    
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      ul li a:hover {
+        color: orange;
+      }
+      ul li{
+        list-style: none;
+      }
+
+      h2 {
+        color: white;
+        text-transform: uppercase;
+      }
+      .main {
+        background-color: #3e2bb8;
+        height: 100%;
+        width: 100%;
+        margin-top: 1%;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+      }
+      .icons {
+        font-size: 35px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 0.3%;
+        color: white;
+      }
+      .fa-facebook {
+        background: #3b5998;
+        color: white;
+        padding-top: 12px;
+        padding-left: 17px;
+        padding-right: 17px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+      .fa-twitter {
+        background: #55acee;
+        color: white;
+        padding-top: 12px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+        padding-top: 12px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+      .fa-instagram {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        color: white;
+        padding-top: 12px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+      .fa-google {
+        background: rgb(185, 9, 9);
+        color: white;
+        padding-top: 12px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+    
+      #sign:hover {
+        background-color: blue;
+      }
+      .footer p {
+        color: white;
+        padding-top: 1.8%;
+        padding-bottom: 1.8%;
+      }
+      .footer {
+        width: 100%;
+        background-color: rgb(34, 34, 190);
+        text-align: center;
+      }
+      @media (max-width: 800px) {
+        .container {
+          background-color: rgb(34, 34, 190);
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          padding-top: 2%;
+          line-height: 30px;
+          flex-wrap: wrap;
+          flex-direction: row;
+        }
+        .about p {
+          color: rgb(189, 181, 181);
+        }
+        .about {
+          margin-bottom: 2%;
+          width: 100%;
+        }
+      }
+      @media (max-width: 500px) {
+        .container {
+          background-color:rgb(34, 34, 190);
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          padding: 2%;
+          line-height: 30px;
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+        .about p {
+          color: rgb(189, 181, 181);
+        }
+        .about {
+          margin-bottom:1%;
+          width: 100%;
+        }
+        .links {
+          margin-top: 1%;
+        }
+        .catagories {
+          margin-top: 1%;
+        }
+        .contact {
+          margin-top: 1%;
+        }
+        h2 {
+          text-align: center;
+        }
+      }
+    </style>
+</head>
+<body>
+    <div class="container2">
+        <div class="header">
+<h2>SMART CITY MANAGEMENT SYSTEM</h2>
+        </div>
+        <nav>
+            <ul id = "menu">
+                <li><a href="admin-home.html">Home</a></li>
+                <li class="about"><a href = "adminabout.html">About Us</a>
+                </li>
+                <li class = "Dashboard"><a href="allcities_admin.html">All Cities</a>
+                </li>
+                <li class = "Administration"><a href="Admin-dashboard.html">Administration</a></li>
+                <li class = "Reports"><a href="cityreport.html">Reports</a></li>
+                <li class = "MyAccount"><a href="myaccount.html">My Account</a></li>
+                <li class = "logout"><a href="index.html" onclick="preventback()">Logout</a></li>
+                
+            </ul> 
+            </nav>
+            </div>
+        <script src="../javascript/script.js"></script>
+
+        <div class="cities">
+            <h1>All Types</h1> <hr> <br>
+        </div>
+        <div class="explore">
+            <div class="city">
+                <img src="./images/bank.jpeg" alt="">
+                <button><a href="addmumbaibank.html">Bank</a></button>
+            </div>
+            <div class="city">
+                <img src="./images/tourist places.webp" alt="">
+                <button><a href="addmumbaitouristplaces.html">Tourist Places</a></button>
+            </div>
+            <div class="city">
+                <img src="./images/hotels.jpg" alt="">
+                <button><a href="addmumbaihotels.html">Hotels</a></button>
+            </div>
+            <div class="city">
+                <img src="./images/university.jpg" alt="">
+                <button><a href="addmumbaiuniversity.html">University</a></button>
+            </div>
+            <div class="city">
+                <img src="./images/theatres.jpg" alt="">
+                <button><a href="">Theatres</a></button>
+            </div>
+        </div>
+        <footer>
+          <section class="main">
+            <section class="container">
+             
+              
+              <section class="links">
+                <h2>Quick links</h2>
+                <br />
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">All Cities</a></li>
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Contact Us</a></li>
+               
+                </ul>
+              </section>
+              
+              <section class="conatct">
+                <h2>Contact us</h2>
+                <br />
+                <ul>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-home" style="color: white;"></i> SCO-75,Chandigarh,India
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      ><i class="fa fa-envelope" style="color: white;"></i> ansh12saxena@gmail.com</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-phone" style="color: white;"></i> Mobile:9867218690</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-user" style="color: white;"></i> AnshSaxena</a>
+                  </li>
+                </ul>
+              </section>
+            
+            </section>
+  
+            </section>
+            <section class="icons">
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-instagram"></i>
+              <i class="fa fa-linkedin"></i>
+              <i class="fa fa-google"></i>
+            </section>
+            <br />
+          </section>
+          <section class="footer">
+            <p>2021 ©Copyright :<a href="./index.html">Smart City Information System</a></p>
+          </section>
+        </footer>      
+</body>
+</html>

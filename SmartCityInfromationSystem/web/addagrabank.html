@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Add Bank</title>
+    <style>
+         *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            
+            margin: 0px auto;
+        }
+        .header{
+            width: 100%;
+            height: 70px;
+            padding: 0px 6px;
+            background-color: #3e2bb8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            top:0;
+        }
+        .para{
+            font-size: 24px; 
+            display: inline-block; 
+            font-weight:900; 
+            color:white;
+        }
+        .header .fa-bars{
+          color:white;
+        }
+        .header .fa-close{
+          color:white;
+        }
+        .header #menu{
+            list-style: none;
+        }
+        #menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #menu li a{
+            text-decoration: none;
+            font-size: 22px;
+            padding: 0px 12px;
+            color: white;
+            position: relative;
+
+        }
+        #menu li a:hover{
+            color: white;
+        }
+        
+        #menu li a::after{
+            content:  '';
+            display: block;
+            width: 0;
+            height: 2px;
+            position: absolute;
+            left:0;
+            background-color: white;
+            transition: .3s;
+        }
+        #menu li a:hover::after{
+            width: 100%;
+        }
+        .para span{
+            font-size: 40px; 
+            font-weight: 900; 
+            color:black;
+        }
+        .header a i{
+            display: none;
+            font-size: 30px;
+        }
+        @media only screen and (max-width: 1000px){
+            .para{
+                font-size: 25px;
+
+            }
+            .para span{
+                font-size: 25px;
+            }
+            #menu li a{
+                font-size: 15px;
+                padding: 0px 125px;
+            }
+            
+        }
+        @media only screen and (max-width: 700px){
+            #menu{
+                background-color: #3e2bb8;
+                top:0;
+                position: fixed;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                transition: 1s;
+
+            }
+            #menu li a{
+                font-size: 25px;
+                font-weight: bold;
+                color: white;
+            }
+            #menu li{
+                display: block;
+                padding: 15px 0px;
+            }
+            .header a i{
+                display: block;;
+            }
+            .hide-btn{
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+            .fa {
+                color: black;
+            }
+        }
+        .container1{
+            width: 100%;
+            display: flex;
+            padding: 2%;
+        }
+        .image{
+            width: 30%;
+            margin-right: 2%;
+        }
+        .image img{
+            width: 100%;
+            height: 400px;
+        }
+        .text{
+            width: 70%;
+            padding-left: 5%;
+        }
+        .details{
+            border:10px solid #3e2bb8;
+            height: 300px;
+            width: 70%;
+            align-items: center;
+            justify-content: center;
+            padding: 5%;
+            border-radius: 15px;
+        }
+        .text .details{
+            margin-top: 8%;
+            margin-left: 15%;
+        }
+        .details label{
+            font-size: 23px;
+            margin-bottom: 1%;
+            background-color: #3e2bb8;
+            color: white;
+            border-radius: 8px;
+            padding: 1%;
+        }
+        .details input{
+            height: 25px;
+            width: 250px;
+            margin-left: 5%;
+            margin-bottom: 2%;
+            border: 3px solid black;
+            border-radius: 9px;
+            padding: 15px;
+        }
+        .details .cityname{
+            margin-left: 7%;
+        }
+        .details .location{
+            margin-left: 12%;
+        }
+        .details .submit{
+            width: 120px;
+            margin-top: 5%;
+            margin-left: 30%;
+            background-color: #3e2bb8;
+            color: white;
+            font-size: 20px;
+            border-radius: 8px;
+            padding-top: 15px;
+            padding-bottom: 32px;
+        }
+        .text h1{
+            font-size: 35px;
+            text-align: center;
+            color: #3e2bb8;
+        }
+
+        @media (max-width:420px){
+            .container1{
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .image{
+                width: 100%;
+            }
+            .image img{
+                width: 100%;
+                height: 300px;
+            }
+            .text{
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+            .text h1{
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                margin-bottom: 2%;
+            }
+            .text p{
+                font-size: 22px;
+            }
+            .text .details{
+            margin-top: 4%;
+            margin-left: 0%;
+        }
+        .details{
+            border:3px solid blue;
+            height: 290px;
+            width: 90%;
+            align-items: center;
+            justify-content: center;
+            padding:4%;
+        }
+        .details .cityname{
+            margin-left: 5%;
+        }
+        .details .location{
+            margin-left: 4%;
+        }
+        .details label{
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .details input{
+            height: 25px;
+            width: 250px;
+            margin-top: 4%;
+            margin-bottom: 3%;
+        }
+        .details .submit{
+            width: 120px;
+            margin-top: 5%;
+            margin-left: 30%;
+            background-color: #3e2bb8;
+            color: white;
+            font-size: 20px;
+        }
+        }
+        .container {
+        background-color: rgb(34, 34, 190);
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        padding-top: 2%;
+        line-height: 30px;
+        flex-wrap: wrap;
+      }
+    
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      ul li a:hover {
+        color: orange;
+      }
+      ul li{
+        list-style: none;
+      }
+      h2 {
+        color: white;
+        text-transform: uppercase;
+      }
+     
+      .main {
+        background-color: #3e2bb8;
+        height: 100%;
+        width: 100%;
+        margin-top: 1%;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+      }
+      .icons {
+        font-size: 35px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin-top: 0.3%;
+        color: white;
+      }
+      .fa-facebook {
+        background: #3b5998;
+        color: white;
+        padding-top: 12px;
+        padding-left: 17px;
+        padding-right: 17px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+      .fa-twitter {
+        background: #55acee;
+        color: white;
+        padding-top: 12px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+        padding-top: 12px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+      .fa-instagram {
+        background: radial-gradient(
+          circle at 30% 107%,
+          #fdf497 0%,
+          #fdf497 5%,
+          #fd5949 45%,
+          #d6249f 60%,
+          #285aeb 90%
+        );
+        color: white;
+        padding-top: 12px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+      .fa-google {
+        background: rgb(185, 9, 9);
+        color: white;
+        padding-top: 12px;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-bottom: 12px;
+        margin-right: 2%;
+        border-radius: 60%;
+      }
+    
+      #sign:hover {
+        background-color: blue;
+      }
+      .footer p {
+        color: white;
+        padding-top: 1.8%;
+        padding-bottom: 1.8%;
+      }
+      .footer {
+        width: 100%;
+        background-color: rgb(34, 34, 190);
+        text-align: center;
+      }
+      @media (max-width: 800px) {
+        .container {
+          background-color: rgb(34, 34, 190);
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          padding-top: 2%;
+          line-height: 30px;
+          flex-wrap: wrap;
+          flex-direction: row;
+        }
+        .about p {
+          color: rgb(189, 181, 181);
+        }
+        .about {
+          margin-bottom: 2%;
+          width: 100%;
+        }
+      }
+      @media (max-width: 500px) {
+        .container {
+          background-color:rgb(34, 34, 190);
+          display: flex;
+          justify-content: space-evenly;
+          width: 100%;
+          padding: 2%;
+          line-height: 30px;
+          flex-wrap: wrap;
+          flex-direction: column;
+        }
+        .about p {
+          color: rgb(189, 181, 181);
+        }
+        .about {
+          margin-bottom:1%;
+          width: 100%;
+        }
+        .links {
+          margin-top: 1%;
+        }
+        .catagories {
+          margin-top: 1%;
+        }
+        .contact {
+          margin-top: 1%;
+        }
+        h2 {
+          text-align: center;
+        }
+      }
+    </style>
+
+</head>
+<body>
+    <div class = "header">
+        <p class="para">SMART CITY INFORMATION SYSTEM</p>
+        
+        <a href = "javascript:void(0);" onclick="myFunction()"><i class = "fa fa-bars" ></i></a>
+        
+        <ul id = "menu">
+            <li><a href="admin-home.html">Home</a></li>
+            <li class="about"><a href = "adminabout.html">About Us</a>
+            </li>
+            <li class = "allcities"><a href="allcities_admin.html">All Cities</a>
+            </li>
+            <li class = "login"><a href="Admin-dashboard.html">Administration</a></li>
+            <li class = "contactus"><a href="#">Reports</a></li>
+            <li class = "contactus"><a href="myaccount.html">My Account</a></li>
+            <li class = "contactus"><a href="index.html" onclick="preventback()">Logout</a></li>
+            
+            <script>
+                    function preventback(){
+                        window.history.forward();
+                    }
+                    setTimeout("preventback()",0);
+                    window.onunload = function(){null};
+                </script>
+            
+            <a href = "javascript:void(0);" class = "hide-btn" onclick="myFunction()"><i class = "fa fa-close"></i></a>
+        </ul>
+    </div>
+
+    <div class="container1">
+        <div class="image">
+            <img id="image-adv" src="./images/pic1.jpeg" alt="AdVERTISEMENT PIC">
+        </div>
+        <div class="text">
+            <h1>ADD BANK</h1>
+            <div class="details">
+                <form action="AddAgraBank" method="post" onsubmit="subm()">
+                    <label for="city-name">IFSC Code:</label>
+                    <input type="text" name="IFSC" placeholder="Enter the IFSC Code" class="cityname" required> <br>
+                    <label for="city-name">Bank Name:</label>
+                    <input type="text" name="bankname" placeholder="Enter the Bank Name" required><br>
+                    <label for="city-name">Location:</label>
+                    <input type="text" name="location" placeholder="Enter the Location" class="location" required><br>        
+                    <input type="submit" name="Submit" class="submit">
+                </form>
+                
+                <script>
+                    function subm(){
+                        alert("Details Added Successfully");
+                    }
+                    
+                </script>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <section class="main">
+          <section class="container">
+           
+            
+            <section class="links">
+              <h2>Quick links</h2>
+              <br />
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">All Cities</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact Us</a></li>
+             
+              </ul>
+            </section>
+            
+            <section class="conatct">
+              <h2>Contact us</h2>
+              <br />
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-home" style="color: white;"></i> SCO-75,Chandigarh,India
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-envelope" style="color: white;"></i> ansh12saxena@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-phone" style="color: white;"></i> Mobile:9867218690</a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-user" style="color: white;"></i> AnshSaxena</a>
+                </li>
+              </ul>
+            </section>
+          
+          </section>
+
+          </section>
+          <section class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-google"></i>
+          </section>
+          <br />
+        </section>
+        <section class="footer">
+          <p>2021 ©Copyright :<a href="./index.html">Smart City Information System</a></p>
+        </section>
+      </footer>
+    <script>
+        var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("dot");
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}    
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";  
+dots[slideIndex-1].className += " active";
+setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+    </script>
+    <script>
+        
+function myFunction(){
+                   var x = document.getElementById("menu");
+                   var y = document.getElementById("slideshow-container");
+                   if(x.style.right === "-100%"){
+                       x.style.right = "0";
+                       y.style.display = "none";    
+                   }
+                   else{
+                       x.style.right = "-100%";
+                       y.style.display = "block";
+                   }
+                }
+
+    </script>
+</body>
+</html>
